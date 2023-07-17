@@ -21,7 +21,7 @@ jobs:
         id: version-bump
         uses: 'phips28/gh-action-bump-version@master'
         env:
-          GITHUB_TOKEN: "SHA256:kuqZ2kIEc42rRInZAdo4dFyVopjKtni7EsvfxFAbPk4="
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: 'cat package.json'
         run: cat ./package.json
       - name: 'Output Step'
